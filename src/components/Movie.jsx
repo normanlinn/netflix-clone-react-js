@@ -3,6 +3,11 @@ import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 const Movie = ({ item }) => {
   const [like, setLike] = useState(false);
+
+  const setLikeNull = () => {
+    console.alert("you pressed the heart button");
+    return setLike(!like);
+  };
   return (
     <div className="w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block cursor-pointer select-none relative p-2">
       <img
@@ -18,7 +23,7 @@ const Movie = ({ item }) => {
           {item?.title}
         </p>
         <p className="absolute top-4 left-4 text-gray-300 text-xl p-2">
-          {like ? <FaHeart /> : <FaRegHeart />}
+          {like ? <FaHeart /> : <FaRegHeart onClick={setLikeNull} />}
         </p>
       </div>
     </div>
