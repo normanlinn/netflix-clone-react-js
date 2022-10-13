@@ -14,8 +14,6 @@ const Main = () => {
     });
   }, []);
 
-  // console.log(movie);
-
   // cut off the text string
   const truncateString = (str, num) =>
     str?.length > num ? str.slice(0, num) + " ..." : str;
@@ -36,7 +34,7 @@ const Main = () => {
           alt={movie?.title}
         />
 
-        <div className="absolute w-full top-[20%] p-4 md:p-8 select-none">
+        <div className="absolute w-full top-[20%] p-4 md:p-8">
           <h1 className="text-3xl md:text-5xl font-bold">{movie?.title}</h1>
           {/* buttons container*/}
           <div className="text-lg my-4 ">

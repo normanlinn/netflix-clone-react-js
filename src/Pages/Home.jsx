@@ -6,11 +6,11 @@ const Home = () => {
   return (
     <>
       <Main />
-      <Row title="upcoming" fetchURL={requests.requestUpcoming} />
-      <Row title="popular" fetchURL={requests.requestPopular} />
-      <Row title="trending" fetchURL={requests.requestTrending} />
-      <Row title="top rated" fetchURL={requests.requestTopRated} />
-      <Row title="horror" fetchURL={requests.requestHorror} />
+      <Row rowId="1" title="upcoming" fetchURL={requests.requestUpcoming} />
+      <Row rowId="2" title="popular" fetchURL={requests.requestPopular} />
+      <Row rowId="3" title="trending" fetchURL={requests.requestTrending} />
+      <Row rowId="4" title="top rated" fetchURL={requests.requestTopRated} />
+      <Row rowId="5" title="horror" fetchURL={requests.requestHorror} />
     </>
   );
 };
